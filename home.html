@@ -7,5 +7,22 @@
 </head>
 <body>
     <h1>find second largest number in array</h1>
+    <script>
+        const seclnum = (arr) => {
+            let largest = Number.NEGATIVE_INFINITY
+            let secondlargetNum = Number.NEGATIVE_INFINITY
+            
+            for(let i=0; i<arr.length; i++) {
+                if(arr[i] > largest) {
+                    secondlargetNum = largest
+                    largest = arr[i]
+                }else if(arr[i] !== largest && arr[i] > secondlargetNum) {
+                    secondlargetNum = arr[i]
+                }
+            }
+            return secondlargetNum
+        }
+        console.log(seclnum([2,5,11,1,35,34,33,1,5]))
+    </script>
 </body>
 </html>
